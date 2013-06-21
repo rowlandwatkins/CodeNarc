@@ -15,7 +15,8 @@
  */
 package org.codenarc.rule;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.codehaus.groovy.ast.ASTNode;
 import org.codehaus.groovy.ast.ImportNode;
 import org.codenarc.source.SourceCode;
@@ -37,7 +38,7 @@ import java.util.Map;
  */
 public abstract class AbstractRule implements Rule {
 
-    private static final Logger LOG = Logger.getLogger(AbstractRule.class);
+    private static final Logger LOG = LoggerFactory.getLogger(AbstractRule.class);
 
     /**
      * Flag indicating whether this rule should be enabled (applied). Defaults to true.
